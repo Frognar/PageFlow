@@ -1,8 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{909BF1D8-6E8D-4626-A966-178ACAFC81E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageFlow.WebApi", "src\PageFlow.WebApi\PageFlow.WebApi.csproj", "{9BCD48D1-C46E-42A4-BFF1-8634FF735401}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9BCD48D1-C46E-42A4-BFF1-8634FF735401} = {909BF1D8-6E8D-4626-A966-178ACAFC81E1}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BCD48D1-C46E-42A4-BFF1-8634FF735401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BCD48D1-C46E-42A4-BFF1-8634FF735401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BCD48D1-C46E-42A4-BFF1-8634FF735401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BCD48D1-C46E-42A4-BFF1-8634FF735401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
