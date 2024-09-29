@@ -9,12 +9,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="dotResult" Version="1.1.0" />
-      <PackageReference Include="Mediator.SourceGenerator" Version="2.1.*">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-        <PackageReference Include="Mediator.Abstractions" Version="2.1.*" />
+        <PackageReference Include="dotResult" Version="1.1.0"/>
+        <PackageReference Include="Mediator.SourceGenerator" Version="2.1.*">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Mediator.Abstractions" Version="2.1.*"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference
+                Include="..\AutomaticEndpoints.SourceGenerator\AutomaticEndpoints.SourceGenerator.csproj"
+                OutputItemType="Analyzer"
+                ReferenceOutputAssembly="false"/>
     </ItemGroup>
 
 </Project>
