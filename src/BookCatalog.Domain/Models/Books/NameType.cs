@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using DotMaybe;
 
 namespace BookCatalog.Domain.Models.Books;
@@ -24,4 +25,15 @@ public static class Name
         => names.Aggregate(
             Some.With<IEnumerable<NameType>>(new List<NameType>()),
             (current, name) => Maybe.Map2(current, name, (c, n) => c.Append(n)));
+
+    public static TResult Match<TResult>(
+        this NameType name,
+        Func<string, string, TResult> fullName,
+        Func<string, TResult> mononym)
+        => name switch
+        {
+            FullNameType fullNameType => fullName(fullNameType.FirstName, fullNameType.LastName),
+            MononymType mononymType => mononym(mononymType.Name),
+            _ => throw new UnreachableException(),
+        };
 }
